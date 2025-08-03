@@ -103,3 +103,18 @@ def task2(search_list: list[dict], data: str) -> str:
             total_weight += weight
 
     return str(round(weighted_sum / total_weight, 1)) if total_weight > 0 else "-1"
+
+
+# Code for solving the recruitment task
+if __name__ == "__main__":
+    with open('find_match_average.dat', 'r') as file:
+        data = file.read()
+
+    search_keys = [
+        {'a': 862984, 'b': 29105, 'c': 605280, 'd': 678194, 'e': 302120},
+        {'a': 20226, 'b': 781899, 'c': 186952, 'd': 506894, 'e': 325696}
+    ]
+
+    result = task2(search_keys, data)
+
+    print(f"Result of task2 for recruitment task: {result}")
